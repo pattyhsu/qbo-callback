@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Connecting...</title></head>
+<body>
+<p>Connecting to Flip Analyzer...</p>
+<script>
+  const params = window.location.search;
+  const code = new URLSearchParams(params).get('code');
+  const realmId = new URLSearchParams(params).get('realmId');
+  if (code && realmId) {
+    window.location.href = 'flipanalyzer://oauth-callback?code=' + code + '&realmId=' + realmId;
+  }
+</script>
+</body>
+</html>
